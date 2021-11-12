@@ -65,9 +65,9 @@ function CLI:get_duration()
     local dx, dy = 0, 0
 
     if self:in_pairs(CLI.ALLOWED_CHARS.UP, self.d) then
-        dx = 1
-    elseif self:in_pairs(CLI.ALLOWED_CHARS.DOWN, self.d) then
         dx = -1
+    elseif self:in_pairs(CLI.ALLOWED_CHARS.DOWN, self.d) then
+        dx = 1
     elseif self:in_pairs(CLI.ALLOWED_CHARS.RIGHT, self.d) then
         dy = 1
     elseif self:in_pairs (CLI.ALLOWED_CHARS.LEFT, self.d) then
