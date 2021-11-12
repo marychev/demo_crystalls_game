@@ -46,8 +46,8 @@ function IGame:tick()
       self.area:set_active_cell(cell)
       self.area:set_change_cell(change_cell)
 
-      -- print('Tick')
-      -- self:dump()
+      print('Tick')
+      self:dump()
 
       return {true, "ok"}
    else
@@ -71,11 +71,11 @@ function IGame:move()
 end
 
 function IGame:mix()
-   -- print("Prepare to remove_horizontal_crystals")
+   print("Prepare to remove_horizontal_crystals")
    Cell:remove_horizontal_crystals(self.area.cells)
-   -- print("Prepare to remove_vertical_crystals")
+   print("Prepare to remove_vertical_crystals")
    Cell:remove_vertical_crystals(self.area.cells)
-   --self:dump()
+   self:dump()
 
    Cell:fill_crystals(self.area)
 end
